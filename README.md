@@ -28,6 +28,9 @@ Array
         )
 )
 */
+
+// retrieves all logged queries
+$entries = $pdo->getLog();
 ```
 
 Installation
@@ -42,6 +45,11 @@ $ composer require "herrera-io/pdo-log=~1.0"
 Usage
 -----
 
-?
+The logging `Pdo` class is a subclass of the real `PDO` class, so the only
+thing that has been changed is adding the ability to log certain actions,
+and that `query()` and `prepare()` will return the logging version of the
+`PDOStatement` class. This version of the class is not a subclass of the
+original, but all property gets/sets and method calls are mirrored. You
+can still retrieve the real instance using `PdoStatement->getPdoStatement()`.
 
 [Build Status]: https://travis-ci.org/herrera-io/php-pdo-log.png?branch=master
