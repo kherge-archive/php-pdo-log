@@ -107,6 +107,14 @@ class PdoStatementTest extends TestCase
         $this->assertInternalType('float', $log[1]['time']);
     }
 
+    public function testGetPdoStatement()
+    {
+        $this->assertSame(
+            $this->real,
+            $this->fake->getPdoStatement()
+        );
+    }
+
     protected function setUp()
     {
         $this->pdo = new Pdo(

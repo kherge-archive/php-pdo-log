@@ -114,4 +114,14 @@ class PdoStatement
 
         return $result;
     }
+
+    /**
+     * Returns the real `PDOStatement` instance.
+     *
+     * @return \PDOStatement The instance.
+     */
+    public function getPdoStatement()
+    {
+        return $this->statement;
+    }
 }
