@@ -1,18 +1,23 @@
 {
-    "name": "herrera-io/pdo-log",
+    "name": "hgraca/pdo-log",
     "description": "A simple way to log PDO queries and execution times.",
     "keywords": ["pdo", "log", "debug"],
-    "homepage": "http://github.com/herrera-io/php-pdo-log",
+    "homepage": "http://github.com/hgraca/php-pdo-log",
     "license": "MIT",
     "authors": [
         {
             "name": "Kevin Herrera",
             "email": "kevin@herrera.io",
             "homepage": "http://kevin.herrera.io"
+        },
+        {
+            "name": "Herberto Graca",
+            "email": "herberto.graca@gmail.com",
+            "homepage": "http://www.hgraca.eu"
         }
     ],
     "support": {
-        "issues": "https://github.com/herrera-io/php-pdo-log/issues"
+        "issues": "https://github.com/hgraca/php-pdo-log/issues"
     },
     "require": {
         "php": ">=5.3.3",
