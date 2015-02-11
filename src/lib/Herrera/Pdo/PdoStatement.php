@@ -98,17 +98,14 @@ class PdoStatement
      */
     public function execute(array $input_parameters = array())
     {
-        $start = microtime(true);
-        $result = $this->statement->execute($input_parameters);
+        $start  = microtime(true);
+        $result = $this->statement->execute((empty($input_parameters)) ? null : $input_parameters);
 
         $this->pdo->addLog(
             array(
-                'query' => $this->statement->queryString,
-                'time' => microtime(true) - $start,
-                'values' => array_merge(
-                    $this->binds,
-                    $input_parameters
-                ),
+                'query'  => $this->statement->queryString,
+                'time'   => microtime(true) - $start,
+                'values' => array_merge($this->binds, $input_parameters),
             )
         );
 
